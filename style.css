@@ -43,7 +43,7 @@ button {
     border-radius: 20px;
     border: 0;
     padding: 15px 30px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
@@ -79,6 +79,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .main-header .container {
@@ -112,6 +113,8 @@ nav .nav-links {
 .nav-link[class="nav-link"]:hover {
     border-bottom: 5px solid var(--color-Header);
 }
+
+/* HOME PAGE */
 
 /* Hero Section */
 .hero-section .container {
@@ -245,6 +248,10 @@ nav .nav-links {
 
 .quote-section .container h1 {
     font-size: 3rem;
+}
+
+.rating img {
+    filter: drop-shadow(0px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 .quotes-container {
