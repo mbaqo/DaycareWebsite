@@ -43,12 +43,25 @@ button {
     border-radius: 20px;
     border: 0;
     padding: 15px 30px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 button a {
     font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
+}
+
+.learn-button{
+    background-color: var(--color-Yellow);
+}
+
+.learn-button a {
+    color: #333333;
 }
 
 .container {
@@ -65,6 +78,7 @@ header {
     background-color: var(--color-Main);
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .main-header .container {
@@ -164,4 +178,53 @@ nav .nav-links {
     list-style-type: disc;
     list-style-position: inside;
     font-size: 1.2rem;
+}
+
+/* Discover Programs section */
+
+.home-programs-section {
+    background-color: var(--color-Main);
+}
+
+.home-programs-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.home-programs-section .container h1 {
+    font-size: 3rem;
+}
+
+.home-programs-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.home-program a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.home-program a:hover {
+    transform: scale(1.1);
+}
+
+.home-program h3 {
+    font-weight: 800;
+}
+
+.home-program p {
+    max-width: 300px;
+    font-weight: 600;
+}
+
+.home-program img {
+    max-width: 300px;
 }
