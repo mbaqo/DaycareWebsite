@@ -56,7 +56,7 @@ button a {
     color: #fff;
 }
 
-.learn-button{
+.learn-button {
     background-color: var(--color-Yellow);
 }
 
@@ -69,7 +69,9 @@ button a {
     margin: 0 auto;
 }
 
-header, footer, main {
+header,
+footer,
+main {
     width: 100%;
 }
 
@@ -282,9 +284,95 @@ nav .nav-links {
     color: var(--color-Header)
 }
 
+/* PROGRAMS PAGE */
+
+.programs-section .container {
+    padding: 6rem 0;
+}
+
+.programs-section nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 800;
+    background-color: var(--color-Text-Blue);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.program-links li {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.program-links li:first-child {
+    border-radius: 20px 0px 0px 20px;
+    
+}
+
+.program-links li:last-child {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.program-links li.active {
+    background-color: var(--color-Yellow);
+    color: var(--color-Header);
+}
+
+.program {
+    display: none;
+}
+
+.program.active {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 6rem;
+}
+
+.program-text-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.program-text-container h1 {
+    font-size: 3rem;
+    line-height: 0px;
+}
+
+.program-text-container p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.program-image-container {
+    align-self: center;
+}
+
+.program-image-container img {
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+
+
+
+
 /* Footer */
 
-footer, footer a {
+footer,
+footer a {
     background-color: var(--color-Header);
     color: #fff;
 }
