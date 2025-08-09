@@ -82,6 +82,7 @@ nav .nav-links {
     font-size: 1.2rem;
     font-weight: 800;
     color: var(--color-Header);
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -101,23 +102,66 @@ nav .nav-links {
 /* Hero Section */
 .hero-section .container {
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 0;
-    gap: 10rem;
+    gap: 2rem;
+    padding: 3rem 0 7rem;
 }
 
 .hero-text-container {
-    font-size: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    width: 100%;
 }
 
 .hero-text-container h1 {
+    font-size: 3rem;
     line-height: 50px;
 }
 
+.hero-text-container p {
+    font-size: 2rem;
+}
+
+.hero-image-container {
+    width: 100%;
+}
+
 .hero-image-container img {
-    width: 600px;
+    width: 100%;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: var(--color-break-blue);
+}
+
+.welcome-section .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.welcome-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.welcome-text-container h1 {
+    font-size: 3rem;
+}
+
+.welcome-text-container p {
+    font-size: 1.5rem;
+}
+
+.welcome-list li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.2rem;
 }
