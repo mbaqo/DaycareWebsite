@@ -1,9 +1,11 @@
 :root {
-  --color-Header: #3A2754;
-  --color-Text-Blue: #1EB5D9;
-  --color-Pink: #F2597F;
-  --color-Yellow: #F9C92B;
-  --color-Main: #F9F3E8;
+    --color-Header: #3A2754;
+    --color-Text-Blue: #1EB5D9;
+    --color-Pink: #F2597F;
+    --color-Yellow: #F9C92B;
+    --color-Main: #F9F3E8;
+    --color-break-yellow: #FFF8E5;
+    --color-break-blue: #E8f6ff;
 }
 
 *,
@@ -15,8 +17,10 @@
 }
 
 body {
-    background-color: var(--color-Main);
+    background-color: #fff;
     font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
     color: #333333;
 }
 
@@ -34,7 +38,86 @@ a {
     color: #333333;
 }
 
+button {
+    background-color: var(--color-Text-Blue);
+    border-radius: 20px;
+    border: 0;
+    padding: 15px 30px;
+}
+
+button a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
 .container {
     max-width: 80%;
     margin: 0 auto;
+}
+
+header, footer, main {
+    width: 100%;
+}
+
+/* Header */
+header {
+    background-color: var(--color-Main);
+    position: sticky;
+    top: 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    max-width: 150px;
+}
+
+nav .nav-links {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-Header);
+}
+
+.nav-link {
+    padding: 200px 1.3rem 2rem;
+}
+
+.nav-link.active {
+    background-color: var(--color-Text-Blue);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.nav-link[class="nav-link"]:hover {
+    border-bottom: 5px solid var(--color-Header);
+}
+
+/* Hero Section */
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 10rem;
+}
+
+.hero-text-container {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero-text-container h1 {
+    line-height: 50px;
+}
+
+.hero-image-container img {
+    width: 600px;
 }
