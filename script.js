@@ -31,19 +31,14 @@ function showDropDown() {
     const resourceLink = document.querySelector(".noborder");
     const dropDown = document.querySelector("#navbar-sub");
 
-    console.log(resourceLink);
-    console.log(dropDown);
-
     let isOverResource = false;
     let isOverDrop = false;
 
     function checkIfOverBoth() {
         if (!isOverResource && !isOverDrop) {
             dropDown.classList.remove("active");
-            console.log("Out of Both")
         } else {
             dropDown.classList.add("active");
-            console.log("Over One")
         }
     }
 
@@ -62,6 +57,24 @@ function showDropDown() {
     });
 }
 
+function updateActivePage() {
+    const path = window.location.pathname;
+    console.log(path);
+
+    const navLinks = document.querySelectorAll('.nav-list li a');
+
+    console.log(navLinks);
+
+    navLinks.forEach((link) => {
+        if(link.pathname == path) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    })
+}
+
 // Call it once DOM is ready
 document.addEventListener("DOMContentLoaded", initSidebar);
 document.addEventListener("DOMContentLoaded", showDropDown);
+document.addEventListener("DOMContentLoaded", updateActivePage);
