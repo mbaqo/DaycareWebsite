@@ -50,17 +50,14 @@ button:active {
     transform: scale(0.95);
 }
 
-button a {
+a button {
     font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
 }
 
-.learn-button {
+.secondary {
     background-color: var(--color-Yellow);
-}
-
-.learn-button a {
     color: #333333;
 }
 
@@ -316,7 +313,7 @@ nav .nav-links {
 
 .program-links li:first-child {
     border-radius: 20px 0px 0px 20px;
-    
+
 }
 
 .program-links li:last-child {
@@ -518,7 +515,8 @@ section.gallery-section .container {
 
 .photos-container img {
     max-width: 100%;
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
 
 /* ABOUT PAGE */
@@ -550,9 +548,170 @@ section.about-section .container {
     gap: 8rem;
 }
 
-.about-flex-image{
+.about-flex-image {
     align-self: center;
 }
+
+/* CONTACT PAGE */
+
+section.contact-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+
+.contact-section .container h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section .container h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.contact-top-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-top-div h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.call-button {
+    background-color: var(--color-Header);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.email-button {
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-bottom-div {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-div {
+    background-color: #f5dfb7;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.child-div, .birthdate-div {
+    display: none;
+}
+
+.child-div.active, .birthdate-div.active {
+    display: flex;
+}
+
+.input-div input {
+    max-width: 90%;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+    padding: 0.2rem;
+}
+
+.input-div select {
+    max-width: 50%;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+    padding: 0.2rem;
+}
+
+#hearabout {
+    max-width: 90%;
+}
+
+#comment {
+    max-width: 90%;
+    height: 10rem;
+    resize: none;
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+
+.short-input {
+    max-width: 20%;
+}
+
+.add-btn-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.add-btn {
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: rgb(9, 80, 42);
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.submit-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.submit-btn {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.3rem;
+    box-shadow: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.address-div {
+    background-color: #dff3ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.address-div h3 {
+    font-size: 1.4rem;
+}
+
+.address-div address {
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.address-div p {
+    font-size: 1.2rem;
+}
+
+.address-div iframe {
+    height: 100%;
+}
+
 
 /* Footer */
 
@@ -613,3 +772,4 @@ footer .container {
     align-items: center;
     font-size: 1.1rem;
 }
+
