@@ -405,15 +405,96 @@ nav .nav-links {
     background-color: red;
 }
 
+/* HEALTH & SAFETY PAGE */
 
+section.health-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 0;
+}
 
+.health-section .container h1 {
+    font-size: 3rem;
+}
+
+.health-section .container h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-Text-Blue)
+}
+
+.health-section .container p {
+    font-size: 1.5rem;
+}
+
+/* NUTRITION PAGE */
+
+section.nutrition-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+
+.nutrition-section .container h1 {
+    font-size: 3rem;
+}
+
+.nutrition-section .container h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-Text-Blue)
+}
+
+.nutrition-section .container p {
+    font-size: 1.5rem;
+}
+
+.nutrition-section .container li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.5rem
+}
+
+/* HOLIDAYS PAGE */
+
+section.holidays-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+
+.holidays-section .container h1 {
+    font-size: 3rem;
+}
+
+.holidays-section .container h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-Text-Blue)
+}
+
+.holidays-section .container p {
+    font-size: 1.5rem;
+    color: #808080;
+}
+
+.holidays-section .container li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.5rem
+}
 
 
 /* Footer */
 
-footer,
-footer a {
+footer {
     background-color: var(--color-Header);
+}
+
+footer a {
     color: #fff;
 }
 
