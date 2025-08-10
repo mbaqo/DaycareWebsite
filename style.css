@@ -365,6 +365,46 @@ nav .nav-links {
     border-radius: 20px;
 }
 
+/* RESOURCES PAGE */
+
+.resources-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 4rem;
+}
+
+.resources-section .container h1 {
+    font-size: 3rem;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.resource a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-container {
+    font-size: 4rem;
+    color: #fff;
+    background-color: var(--color-Text-Blue);
+    padding: 2rem 3rem;
+    border-radius: 1000px;
+}
+
+.resource-links .resource:last-child .icon-container {
+    background-color: red;
+}
+
 
 
 
@@ -381,7 +421,7 @@ footer .container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .footer-column {
