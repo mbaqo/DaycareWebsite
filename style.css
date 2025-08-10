@@ -558,6 +558,7 @@ section.about-section .container {
 
 footer {
     background-color: var(--color-Header);
+    color: #fff;
 }
 
 footer a {
@@ -610,4 +611,5 @@ footer .container {
     display: flex;
     gap: 5px;
     align-items: center;
+    font-size: 1.1rem;
 }
