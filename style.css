@@ -114,6 +114,36 @@ nav .nav-links {
     border-bottom: 5px solid var(--color-Header);
 }
 
+.nav-link.noborder {
+    border-bottom: 0;
+}
+
+.nav-links .resources-sub {
+    position: absolute;
+    background-color: #ffffff75;
+    font-weight: 800;
+    color: var(--color-Header);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.2rem 1rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    display: none;
+}
+
+.nav-links .resources-sub.active {
+    display: block;
+}
+
+.nav-links .resources-sub a {
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.nav-links .resources-sub a:hover {
+    border-bottom: 5px solid var(--color-Header)
+}
+
 .sidebar {
     position: fixed;
     top: 0;
