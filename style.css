@@ -393,7 +393,6 @@ nav .nav-links {
     align-items: center;
     gap: 1.2rem;
     font-size: 1.6rem;
-    color: #fff;
     font-weight: 800;
     background-color: var(--color-Text-Blue);
     border-radius: 20px;
@@ -401,22 +400,26 @@ nav .nav-links {
 }
 
 .program-links li {
-    padding: 1rem;
-    cursor: pointer;
+    padding: 1rem 0;
 }
 
-.program-links li:first-child {
+.program-links li:first-child a {
     border-radius: 20px 0px 0px 20px;
 
 }
 
-.program-links li:last-child {
+.program-links li:last-child a {
     border-radius: 0px 20px 20px 0px;
 }
 
-.program-links li.active {
+.program-links a.active {
     background-color: var(--color-Yellow);
     color: var(--color-Header);
+}
+
+.program-links a {
+    padding: 1rem;
+    color: #fff;
 }
 
 .program {
@@ -869,7 +872,7 @@ footer .container {
     font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1070px) {
     nav .nav-links {
         display: none;
     }

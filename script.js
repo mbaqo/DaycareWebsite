@@ -59,14 +59,11 @@ function showDropDown() {
 
 function updateActivePage() {
     const path = window.location.pathname;
-    console.log(path);
 
     const navLinks = document.querySelectorAll('.nav-list li a');
 
-    console.log(navLinks);
-
     navLinks.forEach((link) => {
-        if(link.pathname == path) {
+        if (link.pathname == path) {
             link.classList.add("active");
         } else {
             link.classList.remove("active");
@@ -74,7 +71,32 @@ function updateActivePage() {
     })
 }
 
+function programSwitch() {
+    const buttons = document.querySelectorAll(".program-links li a")
+    console.log(buttons);
+    const groups = document.querySelectorAll(".program");
+    console.log(groups);
+
+    const params = new URLSearchParams(window.location.search);
+    const open = params.get("open");
+    console.log(params);
+    console.log(open);
+    if (!open) return;
+
+    buttons.forEach((btn, btnIndex) => {
+        console.log(btn.textContent);
+        if (btn.textContent.toLowerCase() === open) {
+            btn.classList.add("active");
+            groups[btnIndex].classList.add("active");
+        } else {
+            btn.classList.remove("active");
+            groups[btnIndex].classList.remove("active");
+        }
+    });
+}
+
 // Call it once DOM is ready
 document.addEventListener("DOMContentLoaded", initSidebar);
 document.addEventListener("DOMContentLoaded", showDropDown);
 document.addEventListener("DOMContentLoaded", updateActivePage);
+document.addEventListener("DOMContentLoaded", programSwitch);
