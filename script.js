@@ -9,6 +9,7 @@ function initSidebar() {
 
     // Open sidebar
     openIcon.addEventListener("click", (e) => {
+        e.preventDefault();
         e.stopPropagation(); // Prevent immediate close
         sidebar.classList.add("active");
     });
