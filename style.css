@@ -532,10 +532,6 @@ nav .nav-links {
     border-radius: 1000px;
 }
 
-.resource-links .resource:last-child .icon-container {
-    background-color: red;
-}
-
 /* HEALTH & SAFETY PAGE */
 
 section.health-section .container {

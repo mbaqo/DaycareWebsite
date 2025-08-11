@@ -95,8 +95,27 @@ function programSwitch() {
     });
 }
 
+function addChild() {
+    const button = document.querySelector(".add-btn");
+    const childrenNameDivs = document.querySelectorAll(".child-div");
+    const childrenBdateDivs = document.querySelectorAll(".birthdate-div");
+
+    button.addEventListener("click", e => {
+        e.stopPropagation();
+        e.preventDefault();
+        for (let i = 0; i < childrenNameDivs.length; i++) {
+            if (!childrenNameDivs[i].classList.contains("active")) {
+                childrenNameDivs[i].classList.add("active");
+                childrenBdateDivs[i].classList.add("active");
+                break; // stops after first match
+            }
+        }
+    });
+}
+
 // Call it once DOM is ready
 document.addEventListener("DOMContentLoaded", initSidebar);
 document.addEventListener("DOMContentLoaded", showDropDown);
 document.addEventListener("DOMContentLoaded", updateActivePage);
 document.addEventListener("DOMContentLoaded", programSwitch);
+document.addEventListener("DOMContentLoaded", addChild());
