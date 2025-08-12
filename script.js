@@ -19,10 +19,9 @@ function initSidebar() {
         if (!sidebar.classList.contains("active")) return;
 
         const clickedInside = sidebar.contains(e.target);
-        const clickedLink = e.target.closest(".sideLink");
+        const clickedLink = e.target.closest(".sidelink");
 
         if (!clickedInside || clickedLink) {
-            console.log(12);
             sidebar.classList.remove("active");
         }
     });
@@ -58,34 +57,36 @@ function showDropDown() {
     });
 }
 
+function norm(p) {
+  // resolve relative hrefs and get pathname only
+  const path = new URL(p, location.href).pathname;
+  // map "/index.html" -> "/", remove ".html", drop trailing slash (except root)
+  const cleaned = path
+    .replace(/\/index\.html$/i, '/')
+    .replace(/\.html$/i, '')
+    .replace(/\/+$/, '');
+  return cleaned === '' ? '/' : cleaned;
+}
+
 function updateActivePage() {
-    const path = window.location.pathname;
-
-    const navLinks = document.querySelectorAll('.nav-list li a');
-
-    navLinks.forEach((link) => {
-        if (link.pathname == path) {
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    })
+  const current = norm(location.pathname);
+  document.querySelectorAll('.nav-list li a').forEach((link) => {
+    const target = norm(link.getAttribute('href') || link.pathname);
+    link.classList.toggle('active', target === current);
+  });
 }
 
 function programSwitch() {
     const buttons = document.querySelectorAll(".program-links li a")
-    console.log(buttons);
+
     const groups = document.querySelectorAll(".program");
-    console.log(groups);
 
     const params = new URLSearchParams(window.location.search);
     const open = params.get("open");
-    console.log(params);
-    console.log(open);
+
     if (!open) return;
 
     buttons.forEach((btn, btnIndex) => {
-        console.log(btn.textContent);
         if (btn.textContent.toLowerCase() === open) {
             btn.classList.add("active");
             groups[btnIndex].classList.add("active");
@@ -119,4 +120,4 @@ document.addEventListener("DOMContentLoaded", initSidebar);
 document.addEventListener("DOMContentLoaded", showDropDown);
 document.addEventListener("DOMContentLoaded", updateActivePage);
 document.addEventListener("DOMContentLoaded", programSwitch);
-document.addEventListener("DOMContentLoaded", addChild());
+document.addEventListener("DOMContentLoaded", addChild);
