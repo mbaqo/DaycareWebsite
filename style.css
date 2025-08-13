@@ -71,6 +71,12 @@ a button {
     margin: 0 auto;
 }
 
+h2.big-heading {
+    font-size: 3rem;
+    font-family: "Baloo 2", sans-serif;
+    color: var(--color-Header);
+}
+
 header,
 footer,
 main {
