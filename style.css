@@ -681,6 +681,11 @@ footer .container {
     font-size: 1.1rem;
 }
 
+.contact-link svg {
+    width: 1.5rem;
+    fill: #fff;
+}
+
 @media only screen and (max-width: 1600px) {
     .welcome-section .container {
         flex-direction: column;
