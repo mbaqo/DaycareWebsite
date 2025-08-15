@@ -262,7 +262,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 4rem 0 10rem;
     gap: 4rem;
 }
 
@@ -284,11 +284,11 @@
     gap: 1rem;
 }
 
-.icon-container {
-    font-size: 4rem;
-    color: #fff;
+.icon-container svg {
+    fill: #fff;
+    width: 10rem;
     background-color: var(--color-Text-Blue);
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     border-radius: 1000px;
 }
 
