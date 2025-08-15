@@ -1046,14 +1046,14 @@ footer .container {
         width: 3rem;
         height: 3rem;
     }
-
-    .photos-container {
-        padding: 1rem;
-    }
-
     .resources-button-container {
         display: flex;
         justify-content: center;
+    }
+
+    .photos-container {
+        padding: 1rem;
+        grid-template-columns: 1fr;
     }
 }
 
