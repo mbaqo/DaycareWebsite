@@ -111,6 +111,9 @@ function addChild() {
                 childrenBdateDivs[i].classList.add("active");
                 break; // stops after first match
             }
+            if (i === childrenNameDivs.length - 2) {
+                button.style.display = "none";
+            }
         }
     });
 }
@@ -120,4 +123,8 @@ document.addEventListener("DOMContentLoaded", initSidebar);
 document.addEventListener("DOMContentLoaded", showDropDown);
 document.addEventListener("DOMContentLoaded", updateActivePage);
 document.addEventListener("DOMContentLoaded", programSwitch);
-document.addEventListener("DOMContentLoaded", addChild);
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.body.classList.contains('contact-page')) {
+    addChild();
+  }
+});
